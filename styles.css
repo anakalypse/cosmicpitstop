@@ -1,4 +1,4 @@
-/* Reset some defaults for consistency */
+/* Reset some defaults */
 * {
     margin: 0;
     padding: 0;
@@ -10,18 +10,40 @@ body {
     background-color: #0b0c2a;
     color: #ffffff;
     height: 100vh;
+    overflow: hidden; /* prevent scrollbars from starfield */
 }
 
-/* Hero section fills full screen */
+/* Hero section with background image and atmospheric overlay */
 .hero {
     position: relative;
     height: 100vh;
     background: url('assets/images/fogroad.jpg') no-repeat center center/cover;
+    overflow: hidden;
 }
 
-/* Overlay for darkened look + glow effect */
+/* Starfield effect */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 2px);
+    animation: starDrift 60s linear infinite;
+    z-index: 0;
+}
+
+/* Subtle fog gradient overlay */
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+    z-index: 1;
+}
+
+/* Overlay content sits on top */
 .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
     height: 100%;
     width: 100%;
     display: flex;
@@ -29,41 +51,27 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-shadow: 0 0 50px rgba(255, 79, 216, 0.2);
 }
 
 /* Neon startup animation */
 @keyframes neonStartup {
-    0% {
-        opacity: 0;
-        text-shadow: none;
-    }
-    10% {
-        opacity: 0.3;
-        text-shadow: 0 0 2px #ff4fd8;
-    }
-    20% {
-        opacity: 0.6;
-        text-shadow: 0 0 10px #ff4fd8;
-    }
-    30% {
-        opacity: 1;
-        text-shadow: 0 0 20px #ff4fd8, 0 0 30px #ff4fd8;
-    }
-    35% {
-        opacity: 0.9;
-        text-shadow: 0 0 15px #ff4fd8;
-    }
-    40% {
-        opacity: 1;
-        text-shadow: 0 0 25px #ff4fd8;
-    }
-    100% {
-        opacity: 1;
-        text-shadow: 0 0 40px #ff4fd8, 0 0 60px #ff4fd8;
-    }
+    0% { opacity: 0; text-shadow: none; }
+    10% { opacity: 0.3; text-shadow: 0 0 2px #ff4fd8; }
+    20% { opacity: 0.6; text-shadow: 0 0 10px #ff4fd8; }
+    30% { opacity: 1; text-shadow: 0 0 20px #ff4fd8, 0 0 30px #ff4fd8; }
+    35% { opacity: 0.9; text-shadow: 0 0 15px #ff4fd8; }
+    40% { opacity: 1; text-shadow: 0 0 25px #ff4fd8; }
+    100% { opacity: 1; text-shadow: 0 0 40px #ff4fd8, 0 0 60px #ff4fd8; }
 }
 
-/* Logo styling with softer flicker and smaller size */
+/* Slow starfield drift */
+@keyframes starDrift {
+    from { background-position: 0 0; }
+    to { background-position: 500px 1000px; }
+}
+
+/* Logo styling */
 .logo {
     font-family: 'Monoton', cursive;
     font-size: 3rem;
@@ -80,7 +88,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* Navigation buttons smaller */
+/* Navigation buttons smaller with neon hover effect */
 .navigation a {
     margin: 0 15px;
     font-size: 1rem;
@@ -89,15 +97,17 @@ body {
     padding: 10px 20px;
     border: 2px solid #ffffff;
     border-radius: 30px;
-    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navigation a:hover {
     background-color: #ffffff;
     color: #0b0c2a;
+    box-shadow: 0 0 20px #ff4fd8;
 }
 
-/* Footer */
+/* Footer smaller */
 footer {
     position: absolute;
     bottom: 10px;
