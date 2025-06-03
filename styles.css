@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Monoton', cursive;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
     background-color: #0b0c2a;
     color: #ffffff;
     height: 100vh;
@@ -31,7 +31,7 @@ body {
     text-align: center;
 }
 
-/* Neon pulse animation for logo */
+/* Neon startup animation */
 @keyframes neonStartup {
     0% {
         opacity: 0;
@@ -63,8 +63,7 @@ body {
     }
 }
 
-
-/* Logo styling with pulse */
+/* Logo styling with softer flicker and smaller size */
 .logo {
     font-family: 'Monoton', cursive;
     font-size: 3rem;
@@ -73,7 +72,7 @@ body {
     animation: neonStartup 3s ease forwards;
 }
 
-/* Tagline */
+/* Tagline smaller */
 .tagline {
     font-size: 1.2rem;
     color: #a8f0ff;
@@ -81,7 +80,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* Navigation */
+/* Navigation buttons smaller */
 .navigation a {
     margin: 0 15px;
     font-size: 1rem;
@@ -97,7 +96,6 @@ body {
     background-color: #ffffff;
     color: #0b0c2a;
 }
-
 
 /* Footer */
 footer {
