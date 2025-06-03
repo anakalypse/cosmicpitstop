@@ -18,3 +18,21 @@
         text-shadow: 
             0 0 5px #ff4fd8,
             0 0 10px #ff4fd8,
+            0 0 20px #ff4fd8,
+            0 0 40px #ff4fd8;
+    }
+}
+
+/* Apply the pulse to logo */
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    color: #ff4fd8;
+    text-shadow: 
+        0 0 5px #ff4fd8, 
+        0 0 10px #ff4fd8, 
+        0 0 20px #ff4fd8,
+        0 0 40px #ff4fd8;
+    margin-bottom: 20px;
+    animation: neonPulse 5s infinite ease-in-out;
+}
