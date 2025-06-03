@@ -32,58 +32,59 @@ body {
 }
 
 /* Neon pulse animation for logo */
-@keyframes neonPulse {
+@keyframes neonStartup {
     0% {
-        text-shadow: 
-            0 0 5px #ff4fd8,
-            0 0 10px #ff4fd8,
-            0 0 20px #ff4fd8,
-            0 0 40px #ff4fd8;
+        opacity: 0;
+        text-shadow: none;
     }
-    50% {
-        text-shadow: 
-            0 0 10px #ff4fd8,
-            0 0 20px #ff4fd8,
-            0 0 30px #ff4fd8,
-            0 0 50px #ff4fd8;
+    10% {
+        opacity: 0.3;
+        text-shadow: 0 0 2px #ff4fd8;
+    }
+    20% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px #ff4fd8;
+    }
+    30% {
+        opacity: 1;
+        text-shadow: 0 0 20px #ff4fd8, 0 0 30px #ff4fd8;
+    }
+    35% {
+        opacity: 0.9;
+        text-shadow: 0 0 15px #ff4fd8;
+    }
+    40% {
+        opacity: 1;
+        text-shadow: 0 0 25px #ff4fd8;
     }
     100% {
-        text-shadow: 
-            0 0 5px #ff4fd8,
-            0 0 10px #ff4fd8,
-            0 0 20px #ff4fd8,
-            0 0 40px #ff4fd8;
+        opacity: 1;
+        text-shadow: 0 0 40px #ff4fd8, 0 0 60px #ff4fd8;
     }
 }
 
+
 /* Logo styling with pulse */
 .logo {
-    font-family: 'Pacifico', cursive;
-    font-size: 4rem;
+    font-family: 'Monoton', cursive;
+    font-size: 3rem;
     color: #ff4fd8;
-    text-shadow: 
-        0 0 5px #ff4fd8, 
-        0 0 10px #ff4fd8, 
-        0 0 20px #ff4fd8,
-        0 0 40px #ff4fd8;
     margin-bottom: 20px;
-    animation: neonPulse 5s infinite ease-in-out;
+    animation: neonStartup 3s ease forwards;
 }
 
 /* Tagline */
 .tagline {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #a8f0ff;
-    text-shadow: 
-        0 0 3px #a8f0ff, 
-        0 0 8px #a8f0ff;
+    text-shadow: 0 0 3px #a8f0ff, 0 0 8px #a8f0ff;
     margin-bottom: 40px;
 }
 
 /* Navigation */
 .navigation a {
     margin: 0 15px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #ffffff;
     text-decoration: none;
     padding: 10px 20px;
@@ -96,6 +97,7 @@ body {
     background-color: #ffffff;
     color: #0b0c2a;
 }
+
 
 /* Footer */
 footer {
