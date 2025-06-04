@@ -14,8 +14,11 @@
 .fingerprint-svg {
     width: 200%;
     height: 200%;
+    transform-box: fill-box;
+    transform-origin: center;
     animation: fingerprintSpin 20s linear infinite;
 }
+
 
 @keyframes fingerprintSpin {
     0% { transform: rotate(0deg); }
