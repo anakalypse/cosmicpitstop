@@ -62,7 +62,10 @@ body {
 /* Fingerprint SVG layer */
 .fingerprint-layer {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 4;
     mix-blend-mode: screen;
     display: flex;
@@ -71,8 +74,8 @@ body {
 }
 
 .fingerprint-svg {
-    width: 200%;
-    height: 200%;
+    width: 250%;
+    height: 250%;
     animation: fingerprintSpin 15s linear infinite;
 }
 
@@ -80,6 +83,7 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
 
 /* Fog layer */
 .fog-layer {
