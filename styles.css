@@ -13,7 +13,7 @@ body {
     overflow: hidden;
 }
 
-/* Hero section */
+/* Hero container */
 .hero {
     position: relative;
     height: 100vh;
@@ -47,7 +47,7 @@ body {
     100% { filter: hue-rotate(360deg); }
 }
 
-/* Film grain layer */
+/* Subtle film grain layer */
 .grain-layer {
     position: absolute;
     top: 0; 
@@ -61,7 +61,7 @@ body {
     pointer-events: none;
 }
 
-/* Fingerprint swirl layer (refined) */
+/* Fingerprint swirl layer */
 .fingerprint-layer {
     position: absolute;
     top: -50%;
@@ -109,7 +109,7 @@ body {
     50% { opacity: 0.1; }
 }
 
-/* Particles layer */
+/* Floating particles layer */
 .particles-layer {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -134,9 +134,9 @@ body {
     z-index: 6;
 }
 
-/* Overlay content — properly layered now */
+/* Content overlay positioned properly */
 .overlay {
-    position: absolute; 
+    position: absolute;
     z-index: 10;
     top: 0;
     left: 0;
@@ -149,7 +149,7 @@ body {
     text-align: center;
 }
 
-/* Neon startup animation */
+/* Neon startup animation for logo */
 @keyframes neonStartup {
     0% { opacity: 0; text-shadow: none; }
     10% { opacity: 0.3; text-shadow: 0 0 2px #ff4fd8; }
@@ -160,7 +160,6 @@ body {
     100% { opacity: 1; text-shadow: 0 0 40px #ff4fd8, 0 0 60px #ff4fd8; }
 }
 
-/* Logo styling */
 .logo {
     font-family: 'Monoton', cursive;
     font-size: 3rem;
@@ -169,7 +168,6 @@ body {
     animation: neonStartup 3s ease forwards;
 }
 
-/* Tagline */
 .tagline {
     font-size: 1.2rem;
     color: #a8f0ff;
@@ -177,7 +175,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* Navigation buttons with neon feel */
 .navigation a {
     margin: 0 15px;
     font-size: 1rem;
@@ -197,12 +194,13 @@ body {
     box-shadow: 0 0 20px #ff4fd8;
 }
 
-/* Footer */
-footer {
+/* Footer positioned properly */
+.footer {
     position: absolute;
     bottom: 10px;
     width: 100%;
     text-align: center;
     font-size: 0.8rem;
     color: #888;
+    z-index: 10;
 }
