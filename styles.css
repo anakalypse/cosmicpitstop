@@ -143,3 +143,28 @@ footer {
     font-size: 0.8rem;
     color: #888;
 }
+
+/* Wavy surreal layer */
+.wave-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 79, 216, 0.08), transparent 70%), 
+                linear-gradient(135deg, rgba(0, 195, 255, 0.12), rgba(255, 78, 205, 0.12));
+    z-index: 0.5; /* behind swirl but above photo */
+
+    /* Subtle motion */
+    background-size: 400% 400%;
+    animation: waveMotion 120s ease infinite;
+    mix-blend-mode: screen;
+}
+
+/* The surreal wave motion */
+@keyframes waveMotion {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
