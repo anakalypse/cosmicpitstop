@@ -1,9 +1,5 @@
 /* Reset defaults */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
@@ -13,7 +9,6 @@ body {
     overflow: hidden;
 }
 
-/* Hero container */
 .hero {
     position: relative;
     height: 100vh;
@@ -21,30 +16,25 @@ body {
     overflow: hidden;
 }
 
+/* Blue fog tint */
 .fog-color-layer {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background: linear-gradient(to bottom, rgba(50, 100, 255, 0.25), rgba(0, 0, 50, 0.4));
     mix-blend-mode: screen;
-    z-index: 1.5;
+    z-index: 1;
 }
 
-/* Wavy surreal layer with color drift */
+/* Wavy surreal layer */
 .wave-layer {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background: radial-gradient(circle at center, rgba(255, 79, 216, 0.06), transparent 70%), 
                 linear-gradient(135deg, rgba(0, 195, 255, 0.1), rgba(255, 78, 205, 0.1));
-    z-index: 1;
     background-size: 400% 400%;
-    animation: waveMotion 60s ease-in-out infinite, hueDrift 240s linear infinite;
     mix-blend-mode: screen;
+    animation: waveMotion 60s ease-in-out infinite, hueDrift 240s linear infinite;
+    z-index: 2;
 }
 
 @keyframes waveMotion {
@@ -58,56 +48,46 @@ body {
     100% { filter: hue-rotate(360deg); }
 }
 
-/* Subtle film grain layer */
+/* Grain layer */
 .grain-layer {
     position: absolute;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background-image: url('assets/images/grain.png');
     background-size: cover;
     opacity: 0.04;
-    z-index: 2;
+    z-index: 3;
     pointer-events: none;
 }
 
-/* Fingerprint swirl layer */
+/* Fingerprint SVG layer */
 .fingerprint-layer {
     position: absolute;
-    top: -50%;
-    left: -50%;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 4;
+    mix-blend-mode: screen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fingerprint-svg {
     width: 200%;
     height: 200%;
-    background: repeating-radial-gradient(
-        ellipse at center,
-        rgba(255, 255, 255, 0.12) 3px,
-        transparent 16px
-    );
-    border-radius: 50%;
-    z-index: 3;
-    mix-blend-mode: screen;
-    animation: fingerprintDrift 3s linear infinite, fingerprintPulse 5s ease-in-out infinite;
+    animation: fingerprintSpin 15s linear infinite;
 }
 
-
-@keyframes fingerprintDrift {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
+@keyframes fingerprintSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-@keyframes fingerprintPulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.015); }
-}
-
-/* Floating fog layer */
+/* Fog layer */
 .fog-layer {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     background: radial-gradient(circle at center, rgba(255,255,255,0.015), transparent 60%);
-    z-index: 4;
     animation: fogDrift 180s ease-in-out infinite, fogPulse 90s ease-in-out infinite;
+    z-index: 5;
 }
 
 @keyframes fogDrift {
@@ -121,14 +101,14 @@ body {
     50% { opacity: 0.1; }
 }
 
-/* Floating particles layer */
+/* Particles layer */
 .particles-layer {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     background: repeating-radial-gradient(circle, rgba(255,255,255,0.015) 0, transparent 2px);
     background-size: 20% 20%;
-    z-index: 5;
     animation: particlesFloat 240s linear infinite;
+    z-index: 6;
 }
 
 @keyframes particlesFloat {
@@ -136,24 +116,21 @@ body {
     100% { background-position: 100% 100%; }
 }
 
-/* Foggy overlay gradient + vignette */
+/* Vignette overlay */
 .hero::after {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.4) 100%),
                 linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
-    z-index: 6;
+    z-index: 7;
 }
 
-/* Content overlay positioned properly */
+/* Content overlay */
 .overlay {
     position: absolute;
     z-index: 10;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -161,7 +138,7 @@ body {
     text-align: center;
 }
 
-/* Neon startup animation for logo */
+/* Neon startup */
 @keyframes neonStartup {
     0% { opacity: 0; text-shadow: none; }
     10% { opacity: 0.3; text-shadow: 0 0 2px #ff4fd8; }
@@ -206,14 +183,13 @@ body {
     box-shadow: 0 0 20px #ff4fd8;
 }
 
-/* Footer positioned properly */
+/* Footer */
 .footer {
     position: fixed;
     bottom: 10px;
-    left: 0;
     width: 100%;
     text-align: center;
     font-size: 0.8rem;
     color: #888;
-    z-index: 100;
+    z-index: 10;
 }
