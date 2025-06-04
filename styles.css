@@ -70,15 +70,15 @@ body {
     height: 200%;
     background: repeating-radial-gradient(
         ellipse at center,
-        rgba(255, 255, 255, 0.05) 1px,
-        transparent 5px
+        rgba(255, 255, 255, 0.035) 2px,
+        transparent 12px
     );
     border-radius: 50%;
     z-index: 3;
     mix-blend-mode: screen;
-    /* TEMPORARY debug speed: */
     animation: fingerprintSpin 60s linear infinite, fingerprintPulse 30s ease-in-out infinite;
 }
+
 
 @keyframes fingerprintSpin {
     0% { transform: rotate(0deg) scale(1); }
