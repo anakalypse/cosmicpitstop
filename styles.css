@@ -70,15 +70,15 @@ body {
     height: 200%;
     background: repeating-radial-gradient(
         ellipse at center,
-        rgba(255, 255, 255, 0.08) 2px,
-        transparent 12px
+        rgba(255, 255, 255, 0.12) 3px,
+        transparent 16px
     );
     border-radius: 50%;
     z-index: 3;
     mix-blend-mode: screen;
-    animation: fingerprintDrift 1s linear infinite, fingerprintPulse 3s ease-in-out infinite;
-
+    animation: fingerprintDrift 3s linear infinite, fingerprintPulse 5s ease-in-out infinite;
 }
+
 
 @keyframes fingerprintDrift {
     0% { background-position: 0% 0%; }
