@@ -74,16 +74,15 @@ body {
 }
 
 .fingerprint-svg {
-    width: 250%;
-    height: 250%;
-    animation: fingerprintSpin 15s linear infinite;
+    width: 300%;
+    height: 300%;
+    animation: fingerprintSpin 20s linear infinite;
 }
 
 @keyframes fingerprintSpin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
 
 /* Fog layer */
 .fog-layer {
