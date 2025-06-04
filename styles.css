@@ -71,7 +71,7 @@ body {
     width: 100%;
     height: 100%;
     background: conic-gradient(
-        from 0deg,
+        from 0deg at 50% 40%, /* <--- small center offset */
         rgba(255, 255, 255, 0.04) 0deg 10deg,
         transparent 10deg 20deg,
         rgba(255, 255, 255, 0.04) 20deg 30deg,
