@@ -87,6 +87,14 @@ body {
     100% { background-position: 0% 0%; }
 }
 
+@keyframes neonPulse {
+    0% { text-shadow: 0 0 20px #ff4fd8, 0 0 40px #ff4fd8; }
+    30% { text-shadow: 0 0 25px #ff4fd8, 0 0 50px #ff4fd8; }
+    50% { text-shadow: 0 0 18px #ff4fd8, 0 0 38px #ff4fd8; }
+    70% { text-shadow: 0 0 30px #ff4fd8, 0 0 60px #ff4fd8; }
+    100% { text-shadow: 0 0 20px #ff4fd8, 0 0 40px #ff4fd8; }
+}
+
 /* Foggy overlay gradient + vignette */
 .hero::after {
     content: "";
@@ -140,7 +148,9 @@ body {
     font-size: 3rem;
     color: #ff4fd8;
     margin-bottom: 20px;
-    animation: neonStartup 3s ease forwards;
+    animation: 
+        neonStartup 3s ease forwards, 
+        neonPulse 8s ease-in-out infinite;
 }
 
 /* Tagline hue shift */
