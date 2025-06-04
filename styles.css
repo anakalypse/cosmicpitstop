@@ -136,7 +136,7 @@ body {
 
 /* Overlay content — properly layered now */
 .overlay {
-    position: absolute;
+    position: absolute; 
     z-index: 10;
     top: 0;
     left: 0;
