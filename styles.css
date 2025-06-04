@@ -71,18 +71,35 @@ body {
     width: 100%;
     height: 100%;
     background: conic-gradient(
-        from 0deg at 50% 40%, /* <--- small center offset */
-        rgba(255, 255, 255, 0.04) 0deg 10deg,
-        transparent 10deg 20deg,
-        rgba(255, 255, 255, 0.04) 20deg 30deg,
-        transparent 30deg 40deg,
-        rgba(255, 255, 255, 0.04) 40deg 50deg,
-        transparent 50deg 360deg
+        from 0deg at 50% 40%,
+        rgba(255, 255, 255, 0.02) 0deg,
+        transparent 5deg,
+        rgba(255, 255, 255, 0.02) 10deg,
+        transparent 15deg,
+        rgba(255, 255, 255, 0.02) 20deg,
+        transparent 25deg,
+        rgba(255, 255, 255, 0.02) 30deg,
+        transparent 35deg,
+        rgba(255, 255, 255, 0.02) 40deg,
+        transparent 45deg,
+        rgba(255, 255, 255, 0.02) 50deg,
+        transparent 55deg,
+        rgba(255, 255, 255, 0.02) 60deg,
+        transparent 65deg,
+        rgba(255, 255, 255, 0.02) 70deg,
+        transparent 75deg,
+        rgba(255, 255, 255, 0.02) 80deg,
+        transparent 85deg,
+        rgba(255, 255, 255, 0.02) 90deg,
+        transparent 95deg,
+        rgba(255, 255, 255, 0.02) 100deg,
+        transparent 360deg
     );
     animation: swirlSpin 180s linear infinite;
     z-index: 3;
     mix-blend-mode: screen;
 }
+
 
 @keyframes swirlSpin {
     0% { transform: rotate(0deg); }
