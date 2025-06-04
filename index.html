@@ -8,15 +8,38 @@
 </head>
 <body>
     <div class="hero">
-        <!-- atmospheric layers -->
+        <!-- Background layers -->
         <div class="fog-color-layer"></div>
         <div class="wave-layer"></div>
         <div class="grain-layer"></div>
-        <div class="fingerprint-layer"></div>
+
+        <!-- Fingerprint swirl as SVG -->
+        <div class="fingerprint-layer">
+            <svg viewBox="0 0 100 100" class="fingerprint-svg">
+                <path d="M50,50
+                    m-40,0
+                    a40,40 0 1,0 80,0
+                    a40,40 0 1,0 -80,0
+                    m10,0
+                    a30,30 0 1,0 60,0
+                    a30,30 0 1,0 -60,0
+                    m10,0
+                    a20,20 0 1,0 40,0
+                    a20,20 0 1,0 -40,0
+                    m10,0
+                    a10,10 0 1,0 20,0
+                    a10,10 0 1,0 -20,0" 
+                    stroke="rgba(255,255,255,0.15)" 
+                    stroke-width="0.5" 
+                    fill="none" />
+            </svg>
+        </div>
+
+        <!-- Fog and particles -->
         <div class="fog-layer"></div>
         <div class="particles-layer"></div>
 
-        <!-- overlay -->
+        <!-- Main content -->
         <div class="overlay">
             <div class="logo">Cosmic Pitstop</div>
             <div class="tagline">Fuel for the road ahead.</div>
@@ -26,10 +49,9 @@
                 <a href="#">Contact</a>
             </div>
         </div>
+
+        <!-- Footer -->
+        <div class="footer">© 2025 Cosmic Pitstop. All rights reserved.</div>
     </div>
-
-    <!-- Footer now outside hero -->
-    <div class="footer">© 2025 Cosmic Pitstop. All rights reserved.</div>
 </body>
-
 </html>
