@@ -77,7 +77,7 @@ body {
     z-index: 3;
     mix-blend-mode: screen;
     /* TEMPORARY debug speed: */
-    animation: fingerprintSpin 10s linear infinite, fingerprintPulse 5s ease-in-out infinite;
+    animation: fingerprintSpin 60s linear infinite, fingerprintPulse 30s ease-in-out infinite;
 }
 
 @keyframes fingerprintSpin {
