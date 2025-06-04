@@ -71,8 +71,8 @@ body {
     height: 200%;
     background: repeating-radial-gradient(
         circle,
-        rgba(255, 255, 255, 0.05) 1px,
-        transparent 3px
+        rgba(255, 255, 255, 0.08) 2px,
+        transparent 6px
     );
     border-radius: 50%;
     z-index: 3;
