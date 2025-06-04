@@ -76,7 +76,7 @@ body {
     border-radius: 50%;
     z-index: 3;
     mix-blend-mode: screen;
-    animation: fingerprintDrift 1s linear infinite, fingerprintPulse 5s ease-in-out infinite;
+    animation: fingerprintDrift 10s linear infinite, fingerprintPulse 5s ease-in-out infinite;
 
 }
 
