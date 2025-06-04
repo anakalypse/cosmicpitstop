@@ -74,8 +74,8 @@ body {
 }
 
 .fingerprint-svg {
-    width: 300%;
-    height: 300%;
+    width: 150%;
+    height: 150%;
     animation: fingerprintSpin 20s linear infinite;
 }
 
