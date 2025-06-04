@@ -76,6 +76,7 @@ body {
 .fingerprint-spin-container {
     width: 200%;
     height: 200%;
+    transform-origin: center;
     animation: fingerprintSpin 20s linear infinite;
 }
 
