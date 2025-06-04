@@ -70,14 +70,14 @@ body {
         repeating-radial-gradient(circle at 30% 30%, rgba(255,255,255,0.015) 2px, transparent 6px),
         repeating-radial-gradient(circle at 70% 70%, rgba(255,255,255,0.015) 2px, transparent 5px);
     background-size: 400% 400%;
-    animation: swirlMove 120s linear infinite;
+    animation: swirlMove 60s ease-in-out infinite;
     z-index: 3;
     mix-blend-mode: screen;
 }
 
 @keyframes swirlMove {
     0% { background-size: 400% 400%; }
-    50% { background-size: 420% 420%; }
+    50% { background-size: 480% 480%; }
     100% { background-size: 400% 400%; }
 }
 
