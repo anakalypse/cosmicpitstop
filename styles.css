@@ -70,7 +70,7 @@ body {
     height: 200%;
     background: repeating-radial-gradient(
         ellipse at center,
-        rgba(255, 255, 255, 0.035) 2px,
+        rgba(255, 255, 255, 0.08) 2px,
         transparent 12px
     );
     border-radius: 50%;
