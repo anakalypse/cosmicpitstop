@@ -19,10 +19,12 @@ body {
 /* Blue fog tint */
 .fog-color-layer {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(50, 100, 255, 0.25), rgba(0, 0, 50, 0.4));
-    mix-blend-mode: screen;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 1;
+    background: radial-gradient(circle at center, rgba(255, 110, 199, 0.15), rgba(20, 0, 40, 0.8));
 }
 
 /* Wavy surreal layer */
@@ -138,13 +140,25 @@ body {
 /* Content overlay */
 .overlay {
     position: absolute;
-    z-index: 20;
-    top: 0; left: 0; width: 100%; height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 5;
+    padding: 2em;
+}
+
+.tagline {
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+    color: #ff6ec7;
+    text-shadow: 0 0 10px rgba(255, 110, 199, 0.7);
+}
+
+.subtagline {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    color: #f0f0f0;
 }
 
 /* Neon startup */
@@ -174,22 +188,19 @@ body {
 }
 
 .navigation a {
-    margin: 0 15px;
-    font-size: 1rem;
     color: #ffffff;
+    border: 2px solid #ff6ec7;
+    padding: 0.5em 1.2em;
+    border-radius: 25px;
+    margin: 0 0.5em;
     text-decoration: none;
-    padding: 10px 20px;
-    border: 2px solid #ffffff;
-    border-radius: 30px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(4px);
-    transition: all 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .navigation a:hover {
-    background-color: #ffffff;
-    color: #0b0c2a;
-    box-shadow: 0 0 20px #ff4fd8;
+    background-color: rgba(255, 110, 199, 0.2);
+    box-shadow: 0 0 10px rgba(255, 110, 199, 0.7);
 }
 
 /* Footer */
