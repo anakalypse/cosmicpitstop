@@ -205,31 +205,29 @@ body {
     transition: all 0.3s ease;
     background: linear-gradient(
         135deg,
-        #ff6ec7 0%,
-        #ff4fd8 10%,
-        #f46eff 20%,
-        #c599ff 30%,
-        #a070ff 40%,
-        #809fff 50%,
-        #4fd8ff 60%,
-        #00d4ff 70%,
-        #00fff0 80%,
-        #00ffa2 90%,
-        #99ffcc 100%
+        #5E57FF 0%,
+        #F23CA6 20%,
+        #FF9535 40%,
+        #4BFF36 60%,
+        #02FEE4 80%,
+        #5E57FF 100%
     );
     background-size: 300% 300%;
     border: none;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
     animation: gradientShift 8s ease infinite;
 }
+
 
 .navigation a:hover {
     background-position: 100% 0;
     color: #eeeeee;
-    box-shadow: 0 0 20px rgba(255, 110, 199, 0.6),
-                0 0 40px rgba(197, 153, 255, 0.5),
-                0 0 60px rgba(0, 212, 255, 0.4);
+    box-shadow: 
+        0 0 10px rgba(94, 87, 255, 0.5),
+        0 0 20px rgba(242, 60, 166, 0.4),
+        0 0 30px rgba(2, 254, 228, 0.3);
 }
+
 
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
