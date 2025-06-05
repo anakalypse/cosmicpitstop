@@ -197,13 +197,23 @@ body {
 
 .navigation a {
     color: #ffffff;
-    padding: 0.5em 1.2em;
-    border-radius: 30px;
+    padding: 0.4em 1em;
+    border-radius: 25px;
     margin: 0 0.5em;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
-    background: linear-gradient(135deg, #ff6ec7, #c599ff, #00d4ff);
+    background: linear-gradient(
+        135deg,
+        #ff6ec7 0%,
+        #ff4fd8 15%,
+        #f46eff 30%,
+        #c599ff 45%,
+        #a070ff 60%,
+        #809fff 70%,
+        #4fd8ff 85%,
+        #00d4ff 100%
+    );
     background-size: 300% 300%;
     border: none;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
