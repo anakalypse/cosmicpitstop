@@ -196,7 +196,7 @@ body {
 }
 
 .navigation a {
-    color: #ffffff;
+    color: rgba(10, 10, 30, 0.9);
     padding: 0.4em 1em;
     border-radius: 25px;
     margin: 0 0.5em;
@@ -206,13 +206,16 @@ body {
     background: linear-gradient(
         135deg,
         #ff6ec7 0%,
-        #ff4fd8 15%,
-        #f46eff 30%,
-        #c599ff 45%,
-        #a070ff 60%,
-        #809fff 70%,
-        #4fd8ff 85%,
-        #00d4ff 100%
+        #ff4fd8 10%,
+        #f46eff 20%,
+        #c599ff 30%,
+        #a070ff 40%,
+        #809fff 50%,
+        #4fd8ff 60%,
+        #00d4ff 70%,
+        #00fff0 80%,
+        #00ffa2 90%,
+        #99ffcc 100%
     );
     background-size: 300% 300%;
     border: none;
@@ -222,7 +225,7 @@ body {
 
 .navigation a:hover {
     background-position: 100% 0;
-    color: #ffffff;
+    color: rgba(10, 10, 30, 0.9);
     box-shadow: 0 0 20px rgba(255, 110, 199, 0.6),
                 0 0 40px rgba(197, 153, 255, 0.5),
                 0 0 60px rgba(0, 212, 255, 0.4);
