@@ -196,7 +196,7 @@ body {
 }
 
 .navigation a {
-    color: rgba(10, 10, 30, 0.9);
+    color: #eeeeee;
     padding: 0.4em 1em;
     border-radius: 25px;
     margin: 0 0.5em;
@@ -225,7 +225,7 @@ body {
 
 .navigation a:hover {
     background-position: 100% 0;
-    color: rgba(10, 10, 30, 0.9);
+    color: #eeeeee;
     box-shadow: 0 0 20px rgba(255, 110, 199, 0.6),
                 0 0 40px rgba(197, 153, 255, 0.5),
                 0 0 60px rgba(0, 212, 255, 0.4);
