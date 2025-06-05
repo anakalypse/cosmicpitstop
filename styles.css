@@ -144,26 +144,24 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 5;
+    z-index: 10;
     padding: 2em;
 }
 
-.tagline {
-    font-size: 2.5em;
-    margin-bottom: 0.3em;
+/* Logo neon effect */
+.logo {
+    font-family: 'Monoton', cursive;
+    font-size: 4rem;
     color: #ff6ec7;
-    text-shadow: 0 0 10px rgba(255, 110, 199, 0.7);
+    margin-bottom: 20px;
+    text-shadow: 
+        0 0 12px rgba(255, 110, 199, 0.9),
+        0 0 24px rgba(255, 110, 199, 0.7),
+        0 0 36px rgba(255, 110, 199, 0.5);
+    animation: neonStartup 3s ease forwards;
 }
 
-.subtagline {
-    font-size: 1.2em;
-    margin-bottom: 1.5em;
-    color: #ccc; /* softer than pure white */
-    text-shadow: 0 0 8px rgba(255, 110, 199, 0.3);
-}
-
-
-/* Neon startup */
+/* Neon startup animation */
 @keyframes neonStartup {
     0% { opacity: 0; text-shadow: none; }
     10% { opacity: 0.3; text-shadow: 0 0 2px #ff4fd8; }
@@ -174,46 +172,8 @@ body {
     100% { opacity: 1; text-shadow: 0 0 40px #ff4fd8, 0 0 60px #ff4fd8; }
 }
 
-.logo {
-    font-family: 'Monoton', cursive;
-    font-size: 3rem;
-    color: #ff4fd8;
-    margin-bottom: 20px;
-    animation: neonStartup 3s ease forwards;
-}
-
+/* Tagline */
 .tagline {
-    font-size: 1.2rem;
-    color: #a8f0ff;
-    text-shadow: 0 0 3px #a8f0ff, 0 0 8px #a8f0ff;
-    margin-bottom: 40px;
-}
-
-.navigation a {
-    color: #ffffff;
-    border: 2px solid #ff6ec7;
-    padding: 0.4em 1em;
-    border-radius: 25px;
-    margin: 0 0.5em;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    background-color: transparent;
-}
-
-.navigation a:hover {
-    background-color: rgba(255, 110, 199, 0.2) !important;
-    color: #ff6ec7 !important;
-    box-shadow: 0 0 12px rgba(255, 110, 199, 0.7) !important;
-}
-
-/* Footer */
-.footer {
-    position: fixed;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #888;
-    z-index: 10;
-}
+    font-size: 2.2rem;
+    color: #ff6ec7;
+    text-shadow: 0 0 10px rgba(255, 110, 199, 0.7);
