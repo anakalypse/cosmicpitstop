@@ -174,7 +174,7 @@ body {
 
 /* Tagline */
 .tagline {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     color: #a8f0ff;
     text-shadow: 0 0 3px #a8f0ff, 0 0 8px #a8f0ff;
     margin-bottom: 0.5em;
@@ -197,20 +197,31 @@ body {
 
 .navigation a {
     color: #ffffff;
-    border: 2px solid #ff6ec7;
-    padding: 0.35em 0.9em;
-    border-radius: 25px;
+    padding: 0.5em 1.2em;
+    border-radius: 30px;
     margin: 0 0.5em;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
-    background-color: transparent;
+    background: linear-gradient(135deg, #ff6ec7, #c599ff, #00d4ff);
+    background-size: 300% 300%;
+    border: none;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+    animation: gradientShift 8s ease infinite;
 }
 
 .navigation a:hover {
-    background-color: rgba(255, 110, 199, 0.3);
-    color: #ff6ec7;
-    box-shadow: 0 0 15px rgba(255, 110, 199, 0.8);
+    background-position: 100% 0;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 110, 199, 0.6),
+                0 0 40px rgba(197, 153, 255, 0.5),
+                0 0 60px rgba(0, 212, 255, 0.4);
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Footer */
