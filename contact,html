@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Cosmic Pitstop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero">
+        <!-- Background layers (already existing in your main layout) -->
+        <div class="fog-color-layer"></div>
+        <div class="wave-layer"></div>
+        <div class="grain-layer"></div>
+        <div class="glitter-layer"></div>
+        <div class="particles-layer"></div>
+        <div class="fog-layer"></div>
+        <div class="fingerprint-layer">
+            <div class="fingerprint-spin-container">
+                <!-- Fingerprint SVG remains here -->
+            </div>
+        </div>
+
+        <!-- Content overlay -->
+        <div class="overlay">
+            <div class="logo">Cosmic Pitstop</div>
+            <div class="tagline">Fuel for the road ahead.</div>
+            <div class="subtagline">Astrology & Palmistry Readings by Shaun Mattingly</div>
+
+            <div class="contact-section">
+                <p>Thank you for reaching out! I'm always happy to answer any questions you may have and help you navigate your journey.</p>
+
+                <p>You can email me directly at <a href="mailto:cosmicpitstop@gmail.com">cosmicpitstop@gmail.com</a>, or use the form below:</p>
+
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    
+                    <div class="checkbox-container">
+                        <label>
+                            <input type="checkbox" name="mailingList">
+                            I'd like to receive occasional Cosmic Pitstop updates & business news.
+                        </label>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <p class="privacy-note">Your privacy is respected. All inquiries are confidential. You may unsubscribe from updates at any time.</p>
+            </div>
+        </div>
+
+        <div class="footer">© 2025 Cosmic Pitstop. All rights reserved.</div>
+    </div>
+</body>
+</html>
