@@ -1,13 +1,13 @@
-// Neon flicker effect on logo text
+// Cosmic Pitstop v2.3 - Master Script
+
 document.addEventListener("DOMContentLoaded", () => {
     const logo = document.querySelector('.logo');
-    flickerEffect(logo, 10, 100);
+    flickerEffect(logo, 15, 80);  // Updated flicker count and speed
 
-    // Run navigation highlight
-    highlightActiveNav();
+    highlightActiveNav();  // Run navigation highlight
 });
 
-// Flicker function: element, flicker count, flicker speed
+// Neon flicker function using opacity for smoother glow
 function flickerEffect(element, times, speed) {
     let flickers = 0;
     const interval = setInterval(() => {
@@ -20,8 +20,7 @@ function flickerEffect(element, times, speed) {
     }, speed);
 }
 
-
-// Highlight the current page in navigation
+// Highlight current page in navigation based on URL
 function highlightActiveNav() {
     const path = window.location.pathname;
     const navLinks = document.querySelectorAll('.navigation a');
@@ -34,8 +33,8 @@ function highlightActiveNav() {
     });
 }
 
-// Optional smooth scroll for future in-page anchors
-document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+// Smooth scroll for in-page anchors (future-proof)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
