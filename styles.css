@@ -1,19 +1,24 @@
-/* Cosmic Pitstop Master Stylesheet v1.7 */
+/* Cosmic Pitstop Master Stylesheet v1.8 - Mobile Friendly Update */
 
 /* Reset defaults */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    font-size: 16px;
+}
 
 body {
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
     background-color: #0b0c2a;
     color: #ffffff;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
+/* Hero container */
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background: url('assets/images/fogroad.jpg') no-repeat center center/cover;
     overflow: hidden;
 }
@@ -141,9 +146,11 @@ body {
     transform: translate(-50%, calc(-50% - 40px));
     text-align: center;
     z-index: 10;
-    padding: 2em;
+    padding: 2rem;
+    max-width: 90%;
 }
 
+/* LOGO */
 .logo {
     font-family: 'Monoton', cursive;
     font-size: 3rem;
@@ -190,13 +197,16 @@ body {
     position: relative;
     z-index: 20;
     pointer-events: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
 }
 
 .navigation a {
     color: #eeeeee;
-    padding: 0.4em 1em;
+    padding: 0.6em 1.2em;
     border-radius: 20px;
-    margin: 0 0.5em;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.3s ease;
@@ -217,7 +227,6 @@ body {
 
 .navigation a:hover {
     background-position: 100% 0;
-    color: #eeeeee;
     box-shadow: 
         0 0 10px rgba(94, 87, 255, 0.3),
         0 0 20px rgba(242, 60, 166, 0.25),
@@ -238,4 +247,34 @@ body {
     font-size: 0.8rem;
     color: #888;
     z-index: 10;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2.2rem;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+    }
+
+    .subtagline {
+        font-size: 0.85rem;
+    }
+
+    .overlay {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .navigation a {
+        padding: 0.5em 1em;
+        font-size: 0.9rem;
+    }
 }
