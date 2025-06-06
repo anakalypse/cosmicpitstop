@@ -1,4 +1,4 @@
-/* Cosmic Pitstop Master Stylesheet v2.0 - Full Mobile + Glitter Update */
+/* Cosmic Pitstop Master Stylesheet v2.0 - Full Mobile + Glitter + Contact Form Update */
 
 /* Reset defaults */
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -262,6 +262,73 @@ body {
     font-size: 0.8rem;
     color: #888;
     z-index: 10;
+}
+
+/* Contact Form Styling */
+.contact-section {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section p {
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    backdrop-filter: blur(4px);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form button {
+    background: linear-gradient(135deg, rgba(255, 110, 199, 0.8), rgba(0, 195, 255, 0.6));
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 110, 199, 0.4);
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, rgba(255, 110, 199, 1), rgba(0, 195, 255, 0.8));
+    box-shadow: 0 0 20px rgba(255, 110, 199, 0.6);
+}
+
+.checkbox-container {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.privacy-note {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-top: 1rem;
 }
 
 /* Responsive Adjustments */
