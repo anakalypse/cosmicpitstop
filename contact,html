@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Cosmic Pitstop</title>
-    <link rel="stylesheet" href="styles-v2.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="hero">
-        <!-- Background layers (already existing in your main layout) -->
+        <!-- Background layers -->
         <div class="fog-color-layer"></div>
         <div class="wave-layer"></div>
         <div class="grain-layer"></div>
@@ -18,7 +18,7 @@
         <div class="fog-layer"></div>
         <div class="fingerprint-layer">
             <div class="fingerprint-spin-container">
-                <!-- Fingerprint SVG remains here -->
+                <!-- You can reuse your existing fingerprint SVG here -->
             </div>
         </div>
 
@@ -29,7 +29,7 @@
             <div class="subtagline">Astrology & Palmistry Readings by Shaun Mattingly</div>
 
             <div class="contact-section">
-                <p>Thank you for reaching out! I'm always happy to answer any questions you may have and help you navigate your journey.</p>
+                <p>✨ Thank you for reaching out! I'm always happy to answer any questions you may have and help you navigate your journey.</p>
 
                 <p>You can email me directly at <a href="mailto:cosmicpitstop@gmail.com">cosmicpitstop@gmail.com</a>, or use the form below:</p>
 
