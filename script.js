@@ -11,18 +11,15 @@ document.addEventListener("DOMContentLoaded", () => {
 function flickerEffect(element, times, speed) {
     let flickers = 0;
     const interval = setInterval(() => {
-        if (element.style.visibility === 'hidden') {
-            element.style.visibility = 'visible';
-        } else {
-            element.style.visibility = 'hidden';
-        }
+        element.style.opacity = (element.style.opacity === '0') ? '1' : '0';
         flickers++;
         if (flickers >= times * 2) {
-            element.style.visibility = 'visible';
+            element.style.opacity = '1';
             clearInterval(interval);
         }
     }, speed);
 }
+
 
 // Highlight the current page in navigation
 function highlightActiveNav() {
