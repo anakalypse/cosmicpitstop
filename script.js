@@ -1,13 +1,15 @@
-// Cosmic Pitstop v2.3 - Master Script
-
+// Neon flicker effect on logo text
 document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.querySelector('.logo');
-    flickerEffect(logo, 15, 80);  // Updated flicker count and speed
+    const logoText = document.querySelector('.logo a');
+    if (logoText) {
+        flickerEffect(logoText, 10, 100);
+    }
 
-    highlightActiveNav();  // Run navigation highlight
+    // Run navigation highlight
+    highlightActiveNav();
 });
 
-// Neon flicker function using opacity for smoother glow
+// Flicker function: element, flicker count, flicker speed
 function flickerEffect(element, times, speed) {
     let flickers = 0;
     const interval = setInterval(() => {
@@ -20,25 +22,15 @@ function flickerEffect(element, times, speed) {
     }, speed);
 }
 
-// Highlight current page in navigation based on URL
+// Highlight the current page in navigation
 function highlightActiveNav() {
-    const path = window.location.pathname;
+    const path = window.location.pathname.split("/").pop();
     const navLinks = document.querySelectorAll('.navigation a');
 
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href !== '#' && path.includes(href)) {
+        if (href === path || (path === "" && href === "index.html")) {
             link.classList.add('active');
         }
     });
 }
-
-// Smooth scroll for in-page anchors (future-proof)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
