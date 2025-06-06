@@ -253,6 +253,12 @@ body {
         0 0 24px rgba(168, 240, 255, 0.3);
 }
 
+.navigation a.active {
+    border: 1px solid rgba(255, 110, 199, 0.8);
+    background: rgba(255, 110, 199, 0.15);
+    box-shadow: 0 0 8px rgba(255, 110, 199, 0.3);
+}
+
 /* Footer */
 .footer {
     position: fixed;
