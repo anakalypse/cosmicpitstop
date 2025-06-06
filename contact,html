@@ -8,10 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="logo">
-  <a href="index.html">Cosmic Pitstop</a>
-</div>
-
     <div class="hero">
         <!-- Background layers -->
         <div class="fog-color-layer"></div>
@@ -28,9 +24,9 @@
 
         <!-- Content overlay -->
         <div class="overlay">
-            <div class="logo">Cosmic Pitstop</div>
-            <div class="tagline">Fuel for the road ahead.</div>
-            <div class="subtagline">Astrology & Palmistry Readings by Shaun Mattingly</div>
+            <h1 class="logo"><a href="index.html">Cosmic Pitstop</a></h1>
+            <p class="tagline">Fuel for the road ahead.</p>
+            <p class="subtagline">Astrology & Palmistry Readings by Shaun Mattingly</p>
 
             <div class="contact-section">
                 <p>✨ Thank you for reaching out! I'm always happy to answer any questions you may have and help you navigate your journey.</p>
