@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="logo">
+  <a href="index.html">Cosmic Pitstop</a>
+</div>
+
     <div class="hero">
         <!-- Background layers -->
         <div class="fog-color-layer"></div>
