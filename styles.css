@@ -1,4 +1,4 @@
-/* Cosmic Pitstop Master Stylesheet v2.0 - Full Mobile + Glitter + Contact Form Update */
+/* Cosmic Pitstop Master Stylesheet */
 
 /* Reset defaults */
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -187,6 +187,7 @@ body {
 .logo a {
     color: #ff6ec7;
     text-decoration: none;
+    opacity: 1;  /* <-- add this */
     text-shadow: 
         0 0 12px rgba(255, 110, 199, 0.9),
         0 0 24px rgba(255, 110, 199, 0.7),
