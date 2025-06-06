@@ -1,4 +1,4 @@
-/* Cosmic Pitstop Master Stylesheet v1.8 - Mobile Friendly Update */
+/* Cosmic Pitstop Master Stylesheet v2.0 - Full Mobile + Glitter Update */
 
 /* Reset defaults */
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,10 +23,7 @@ body {
     overflow: hidden;
 }
 
-@keyframes glitterPulse {
-    0%, 100% { opacity: 0.12; }
-    50% { opacity: 0.18; }
-}
+/* Glitter procedural layer */
 .glitter-layer {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -45,6 +42,11 @@ body {
 @keyframes glitterDrift {
     0% { background-position: 0 0, 10px 10px; }
     100% { background-position: 200px 100px, 210px 110px; }
+}
+
+@keyframes glitterPulse {
+    0%, 100% { opacity: 0.12; }
+    50% { opacity: 0.18; }
 }
 
 /* Blue fog tint */
@@ -174,7 +176,7 @@ body {
     max-width: 90%;
 }
 
-/* LOGO */
+/* Logo Styling */
 .logo {
     font-family: 'Monoton', cursive;
     font-size: 3rem;
@@ -202,6 +204,7 @@ body {
     50% { text-shadow: 0 0 36px rgba(255, 110, 199, 1); }
 }
 
+/* Taglines */
 .tagline {
     font-size: 1.35rem;
     color: #a8f0ff;
@@ -217,6 +220,7 @@ body {
     margin-bottom: 1.5em;
 }
 
+/* Navigation Buttons */
 .navigation {
     position: relative;
     z-index: 20;
@@ -249,12 +253,7 @@ body {
         0 0 24px rgba(168, 240, 255, 0.3);
 }
 
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
+/* Footer */
 .footer {
     position: fixed;
     bottom: 10px;
@@ -270,15 +269,12 @@ body {
     .logo {
         font-size: 2.2rem;
     }
-
     .tagline {
         font-size: 1.1rem;
     }
-
     .subtagline {
         font-size: 0.85rem;
     }
-
     .overlay {
         padding: 1.5rem;
     }
@@ -288,7 +284,6 @@ body {
     .logo {
         font-size: 1.8rem;
     }
-
     .navigation a {
         padding: 0.5em 1em;
         font-size: 0.9rem;
