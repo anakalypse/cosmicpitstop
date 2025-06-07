@@ -1,15 +1,9 @@
-// Neon flicker effect on logo text
 document.addEventListener("DOMContentLoaded", () => {
-    const logoText = document.querySelector('.logo a');
-    if (logoText) {
-        flickerEffect(logoText, 10, 100);
-    }
-
-    // Run navigation highlight
+    const logo = document.querySelector('.logo a');
+    flickerEffect(logo, 5, 150);
     highlightActiveNav();
 });
 
-// Flicker function: element, flicker count, flicker speed
 function flickerEffect(element, times, speed) {
     let flickers = 0;
     const interval = setInterval(() => {
@@ -22,14 +16,12 @@ function flickerEffect(element, times, speed) {
     }, speed);
 }
 
-// Highlight the current page in navigation
 function highlightActiveNav() {
-    const path = window.location.pathname.split("/").pop();
+    const path = window.location.pathname;
     const navLinks = document.querySelectorAll('.navigation a');
-
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === path || (path === "" && href === "index.html")) {
+        if (href !== '#' && path.includes(href)) {
             link.classList.add('active');
         }
     });
